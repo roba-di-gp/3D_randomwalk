@@ -22,8 +22,7 @@ for n in range(0,steps):
 plt.figure(0)   #three-dimensional plot
 
 ax = plt.axes(projection='3d')
-ax.plot3D(xx,yy,zz,c='black',alpha=0.8)
-ax.scatter3D(xx,yy,zz,c='black',s=2, depthshade=10)
+ax.plot3D(xx,yy,zz,c='black',alpha=0.8,marker='.',markersize=3)
 ax.scatter3D(x0,y0,z0,c='blue',s=20)
 ax.scatter3D(xx[steps],yy[steps],zz[steps],c='red',s=20)
 
