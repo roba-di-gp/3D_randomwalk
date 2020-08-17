@@ -19,7 +19,7 @@ for n in range(0,steps):
     z = z + zstep
     zz = np.append(zz,z)
 
-plt.figure(0)   #tridimensional plot
+plt.figure(0)   #three-dimensional plot
 
 ax = plt.axes(projection='3d')
 ax.plot3D(xx,yy,zz,c='black',alpha=0.8)
@@ -32,6 +32,7 @@ plt.figure(1)   #xy plane projection
 plt.errorbar(xx,yy,fmt='.--',color='black')
 plt.errorbar(x0,y0,fmt='.',color ='blue',markersize=15)
 plt.errorbar(xx[steps],yy[steps],fmt='.',color ='red',markersize=15)
+plt.title('xy projection')
 plt.grid(linestyle=':')
 
 plt.figure(2)   #yz plane projection
@@ -39,6 +40,7 @@ plt.figure(2)   #yz plane projection
 plt.errorbar(yy,zz,fmt='.--',color='black')
 plt.errorbar(y0,z0,fmt='.',color ='blue',markersize=15)
 plt.errorbar(yy[steps],zz[steps],fmt='.',color ='red',markersize=15)
+plt.title('yz projection')
 plt.grid(linestyle=':')
 
 plt.figure(3)   #xz plane projection
@@ -46,6 +48,7 @@ plt.figure(3)   #xz plane projection
 plt.errorbar(xx,zz,fmt='.--',color='black')
 plt.errorbar(x0,z0,fmt='.',color ='blue',markersize=15)
 plt.errorbar(xx[steps],zz[steps],fmt='.',color ='red',markersize=15)
+plt.title('xz projection')
 plt.grid(linestyle=':')
 
 plt.show()
