@@ -50,6 +50,35 @@ plt.errorbar(xx[steps],zz[steps],fmt='.',color ='red',markersize=15)
 plt.title('xz projection')
 plt.grid(linestyle=':')
 
+plt.figure(4)
+
+iter = np.linspace(0,steps,steps+1)
+
+plt.subplot(311)    #x axis walk
+
+plt.errorbar(iter,xx,color='black',fmt='.-',markersize=4)
+plt.grid(linestyle=':')
+plt.ylabel('x')
+
+plt.subplot(312)    #y axis walk
+   
+plt.errorbar(iter,yy,color='black',fmt='.-',markersize=4)
+plt.grid(linestyle=':')
+plt.ylabel('y')
+
+plt.subplot(313)    #z axis walk
+
+plt.errorbar(iter,zz,color='black',fmt='.-',markersize=4)
+plt.grid(linestyle=':')
+plt.ylabel('z')
+plt.xlabel('steps')
+
+print('Starting point: \n %.1f, %.1f, %.1f \n'%(x0,y0,z0))
+print('Point of arrival: \n %.1f, %.1f, %.1f \n'%(xx[steps],yy[steps],zz[steps]))
+dist = np.sqrt((xx[steps]-x0)**2+(yy[steps]-y0)**2+(zz[steps]-z0)**2)
+print('Final distance: \n %.3f \n'%(dist))
+print('Path lenght: \n %.3f \n'%(path))
+
 plt.show()
 
 
